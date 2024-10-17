@@ -48,7 +48,7 @@ const players = [
 
 //   Question 2
 app.get("/players", (req, res) => {
-    res.status(200).json({ usersData: players });
+    res.status(200).json({ playersData: players });
 });
 
 //Question 3 
@@ -56,7 +56,7 @@ app.get("/players/:id", (req, res) => {
     const id = parseInt(req.params.id);
     const data = players.find(ele => ele.id === id);
 
-    res.json({ player: data });
+    res.json({ user: data });
 });
 
 
